@@ -8,44 +8,24 @@
 </head>
 <body>
 
-<!--Başlıq-->
 <h1>Profil</h1>
 <hr>
-<header>
-  <h1>Quliyev Orxan</h1>
-  <h3>student at</h3>
-  <a href="https://aztu.edu.az/az" target="_blank" rel="noopener">
-    <img src="https://sso.aztu.edu.az/Content/Login/images/aztu_logo_az.png" alt="AzTU Loqo" width="200" height="100">
-  </a>
-</header>
 
-<!-- Əsas məlumatlar -->
+<!-- Başlıq -->
+<header id="profileHeader"></header>
+
+<!-- Haqqımda -->
 <h2 onclick="toggleSection('aboutSection')">Haqqımda (Klikləyin)</h2>
 <hr>
 <div id="aboutSection" class="hidden">
-  <ul id="aboutList">
-    <li><b>Ad:</b> Orxan</li>
-    <li><b>Soyad:</b> Quliyev</li>
-    <li><b>Yaş:</b> 18</li>
-    <li><b>İxtisas:</b> İnformasiya təhlükəsizliyi</li>
-    <li><b>Universitet:</b> <a href="https://aztu.edu.az/az" target="_blank" rel="noopener">AzTU</a></li>
-  </ul>
-
-  <!-- Yeni məlumat əlavə etmək üçün input sahəsi -->
+  <ul id="aboutList"></ul>
   <input type="text" id="aboutInput" placeholder="Yeni məlumat əlavə et">
   <button onclick="addAbout()">Əlavə et</button>
 </div>
 
-<blockquote>
-  <p>
-    Mən, Azərbaycan Texniki Universitetində (AzTU) İnformasiya Təhlükəsizliyi ixtisası üzrə təhsil alıram.
-    <strong>Kibertəhlükəsizlik</strong> sahəsinə dərin marağım var və bu istiqamətdə daimi şəkildə biliklərimi artırmağa çalışıram.
-    Praktiki olaraq əsasən <em>Kali Linux və Windows</em> mühitlərində işləyirəm, müxtəlif testlər və analizlər aparıram.
-    Proqramlaşdırma sahəsində <i>C++ və Python</i> dilləri üzrə əsas biliklərə malikəm.
-    <strong>TryHackMe</strong> platformasında tapşırıqlar üzərində çalışıram və kibertəhlükəsizlik alətləri ilə təcrübəm var.
-  </p>
-</blockquote>
+<blockquote id="aboutText"></blockquote>
 
+<!-- Bacarıqlar -->
 <h3 onclick="toggleSection('skillsSection')">İxtisas üzrə biliklər (Klikləyin)</h3>
 <hr>
 <div id="skillsSection" class="hidden">
@@ -54,61 +34,27 @@
       <tr>
         <th>Kateqoriya</th>
         <th>Təsvir</th>
-        <th>Sil</th>
+        <th>Əməliyyatlar</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td>Əməliyyat Sistemləri</td>
-        <td>Kali GNU/Linux, Windows</td>
-        <td><button onclick="deleteRow(this)">Sil</button></td>
-      </tr>
-      <tr>
-        <td>Proqramlaşdırma</td>
-        <td>Python, C++ (əsas səviyyə)</td>
-        <td><button onclick="deleteRow(this)">Sil</button></td>
-      </tr>
-      <tr>
-        <td>Alətlər</td>
-        <td>Nmap, Metasploit, Burp Suite, Wireshark və s.</td>
-        <td><button onclick="deleteRow(this)">Sil</button></td>
-      </tr>
-      <tr>
-        <td>Təcrübə Platformaları</td>
-        <td>TryHackMe</td>
-        <td><button onclick="deleteRow(this)">Sil</button></td>
-      </tr>
-      <tr>
-        <td>Maraq Sahələri</td>
-        <td>Sistem zəiflikləri, sosial mühəndislik</td>
-        <td><button onclick="deleteRow(this)">Sil</button></td>
-      </tr>
-    </tbody>
+    <tbody></tbody>
   </table>
-
-  <!-- Yeni bilik əlavə etmək üçün input sahələri -->
   <input type="text" id="skillsCategory" placeholder="Kateqoriya">
   <input type="text" id="skillsDescription" placeholder="Təsvir">
   <button onclick="addSkill()">Əlavə et</button>
 </div>
 
+<!-- Əlaqə -->
 <footer>
   <h3 onclick="toggleSection('contactSection')">Əlaqə məlumatları (Klikləyin)</h3>
   <hr>
   <div id="contactSection" class="hidden">
-    <p>E-mail: quliyevorxan@gmail.com</p>
-    <p>Telefon nömrəsi: (+994) 99-999-99-99</p>
-    <p>GitHub: <a href="https://github.com/VQAiX" target="_blank" rel="noopener">VQAiX</a></p>
-
-    <!-- Yeni əlaqə məlumatı əlavə etmək üçün input -->
+    <div id="contactList"></div>
     <input type="text" id="contactInput" placeholder="Yeni əlaqə məlumatı əlavə et">
     <button onclick="addContact()">Əlavə et</button>
-
-    <div id="contactList"></div>
   </div>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
